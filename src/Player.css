@@ -82,6 +82,17 @@
     bottom: 0;
     left: 0;
 }
+.website {
+    color: #333;
+    font-size: 12.5px;
+    margin-bottom: 2vh;
+    position: absolute;
+    bottom: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0px;
+    right: 0px;
+}
 
 @keyframes fadein {
     from { opacity: 0; }

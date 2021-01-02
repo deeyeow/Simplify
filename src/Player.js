@@ -36,6 +36,7 @@ const Player = (props) => {
             </div>
             <div className='popularity' style={fade}>Song Popularity - {props.item.popularity}</div>
             <div className='device' style={fade}>Source - {props.device['name']}</div>
+            <div className='website' style={fade}>https://darren-yau.webflow.io</div>
         </div>
     );
 };
