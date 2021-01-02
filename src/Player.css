@@ -1,0 +1,94 @@
+.song-info-ext {
+    display: table;
+    width: 100%;
+}
+
+.song-info-int {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.song-image {
+    width: 50%;
+    height: auto;
+    max-height: 300px;
+    max-width: 300px;
+}
+
+.song-title {
+    font-size: min(4vw, 30px);
+    margin-top: 1vh;
+}
+
+.song-title-link {
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.song-title-link:visited {
+    color: antiquewhite;
+}
+
+.song-artist {
+    font-size: min(2vw, 15px);
+    margin-top: 1vh;
+}
+
+.song-artist-link {
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.song-artist:visited {
+    color: antiquewhite;
+}
+
+.progress-border {
+    /*border: 1px solid aliceblue;*/
+    height: 0.5vh;
+    /*border-radius: 3px;*/
+    overflow: hidden;
+    padding-top: 5vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.progress-in {
+    background-color: antiquewhite;
+    height: 0.5vh;
+    border-radius: 5px;
+}
+
+.playing-status {
+    height: 0.5vh;
+}
+
+.popularity {
+    color: #333;
+    font-size: 12.5px;
+    margin-bottom: 2vh;
+    margin-right: 2vw;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.device {
+    color: #333;
+    font-size: 12.5px;
+    margin-bottom: 2vh;
+    margin-left: 2vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
