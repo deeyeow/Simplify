@@ -176,9 +176,11 @@ class App extends React.Component {
                     </header>
                 )}
                 {this.state.no_data && (
-                    <p>
-                        Play a song.
-                    </p>
+                    <header className='App-header-login'>
+                        <div className='no-music-text'>
+                            Songs you play will appear here.
+                        </div>
+                    </header>
                 )}
             </div>
         );
