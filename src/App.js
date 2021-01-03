@@ -134,6 +134,27 @@ class App extends React.Component {
         })
     }
 
+    getNextSong(token) {
+        $.ajax({
+            url: 'https://api.spotify.com/v1/me/player/next',
+            method: 'POST',
+            headers: {
+                'Authorization': 'Bearer ' + token
+            },
+            /* no response for POST */
+        })
+    }
+
+    getPrevSong(token) {
+        $.ajax({
+            url: 'https://api.spotify.com/v1/me/player/previous',
+            method: 'POST',
+            headers: {
+                'Authorization': 'Bearer ' + token
+            },
+            /* no response for POST */
+        })
+    }
 
     render() {
         return (
@@ -159,18 +180,36 @@ class App extends React.Component {
                             device={this.state.device}
                             />
                             {this.state.is_playing && (
-                                <button 
-                                className='btn-pause-play btn-pause'
-                                onClick={() => this.pauseCurrentlyPlaying(this.state.token)}>
-                                    <b>&#8545;</b>
-                                </button>
+                                <div className='media-controls-table'>
+                                    <div className='media-controls-row'>
+                                        <button
+                                        className='btn-media btn-prev'
+                                        onClick={() => this.getPrevSong(this.state.token)}>
+                                            &#171;
+                                        </button>
+                                        <button 
+                                        className='btn-media btn-pause'
+                                        onClick={() => this.pauseCurrentlyPlaying(this.state.token)}>
+                                            <b>&#8545;</b>
+                                        </button>
+                                        <button
+                                        className='btn-media btn-next'
+                                        onClick={() => this.getNextSong(this.state.token)}>
+                                            &#187;
+                                        </button>
+                                    </div>
+                                </div>
                             )}
                             {!this.state.is_playing && (
-                                <button 
-                                className='btn-pause-play btn-play'
-                                onClick={() => this.resumeCurrentlyPlaying(this.state.token)}>
-                                    &nbsp;&#9658;
-                                </button>
+                                <div className='media-controls-table'>
+                                    <div className='media-controls-row'>
+                                        <button 
+                                        className='btn-media btn-play'
+                                        onClick={() => this.resumeCurrentlyPlaying(this.state.token)}>
+                                            &nbsp;&#9658;
+                                        </button>
+                                    </div>
+                                </div>
                             )}
                         </div>
                     </header>
