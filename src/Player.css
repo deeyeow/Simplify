@@ -30,10 +30,6 @@
     transition: all 0.5s ease;
 }
 
-.song-title-link:visited {
-    color: antiquewhite;
-}
-
 .song-artist {
     font-size: min(2vw, 15px);
     margin-top: 1vh;
@@ -47,10 +43,6 @@
 .song-artist-link:hover {
     color: #333;
     transition: all 0.5s ease;
-}
-
-.song-artist:visited {
-    color: antiquewhite;
 }
 
 .progress-border {
