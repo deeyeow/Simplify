@@ -25,6 +25,11 @@
     text-decoration: none;
 }
 
+.song-title-link:hover {
+    color: #333;
+    transition: all 0.5s ease;
+}
+
 .song-title-link:visited {
     color: antiquewhite;
 }
@@ -37,6 +42,11 @@
 .song-artist-link {
     color: antiquewhite;
     text-decoration: none;
+}
+
+.song-artist-link:hover {
+    color: #333;
+    transition: all 0.5s ease;
 }
 
 .song-artist:visited {
