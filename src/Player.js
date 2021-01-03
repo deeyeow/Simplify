@@ -1,12 +1,8 @@
 import React from 'react';
 import './Player.css';
+import ProgressBar from './ProgressBar';
 
 const Player = (props) => {
-
-    let progressBarStyle = {
-        width: ((props.progress_ms / props.item.duration_ms) * 100) + '%',
-        animation: props.is_playing ? 'fadein 2s forwards' : 'fadeout 2s forwards',
-    };
 
     let fade ={
         animation: props.is_playing ? 'fadein 2s forwards' : 'fadeout 2s forwards',
@@ -31,7 +27,11 @@ const Player = (props) => {
                     </a>
                 </div>
                 <div className='progress-border'>
-                    <div className='progress-in' style={progressBarStyle}></div>
+                    <ProgressBar
+                    progress_ms={props.progress_ms}
+                    duration_ms={props.item.duration_ms}
+                    is_playing={props.is_playing}
+                    />
                 </div>
             </div>
             <div className='popularity' style={fade}>Song Popularity - {props.item.popularity}</div>

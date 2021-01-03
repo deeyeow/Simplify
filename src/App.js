@@ -6,7 +6,10 @@ import * as $ from 'jquery';
 
 import {auth_URL} from './auth';
 
-import Player from './Player'
+import Player from './Player';
+import DarkModeToggle from './DarkMode';
+import './DarkMode.css';
+import ButtonLogin from './ButtonLogin';
 
 
 class App extends React.Component {
@@ -31,8 +34,6 @@ class App extends React.Component {
             },
             progress_ms: 0,
             device: {},
-
-            manually_paused: false,
         };
 
         /*
@@ -161,13 +162,11 @@ class App extends React.Component {
             <div className='App'>
                 {/* If no token, get*/}
                 {!this.state.token && (
-                    <header className='App-header-login'>
-                        <a
-                        className='btn btn-login'
-                        href={auth_URL}
-                        >
-                            Login to Spotify
-                        </a>
+                    <header className='App-header-login' >
+                        <ButtonLogin
+                        auth_URL={auth_URL}
+                        />
+                        <DarkModeToggle />
                     </header>
                 )}
                 {this.state.token && !this.state.no_data && (
@@ -211,6 +210,7 @@ class App extends React.Component {
                                     </div>
                                 </div>
                             )}
+                            <DarkModeToggle />
                         </div>
                     </header>
                 )}
@@ -219,6 +219,7 @@ class App extends React.Component {
                         <div className='no-music-text'>
                             Songs you play will appear here.
                         </div>
+                        <DarkModeToggle />
                     </header>
                 )}
             </div>
