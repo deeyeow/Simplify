@@ -198,7 +198,7 @@ class App extends React.Component {
                             Songs you play will appear here.
                         </div>
                         <DarkModeToggle />
-                    /</header>
+                    </header>
                 )}
             </div>
         );
