@@ -1,0 +1,88 @@
+.media-controls-table {
+    display: table;
+    width: 100%;
+}
+
+.media-controls-row {
+    display: table-row;
+}
+
+.btn-media {
+    background-color: transparent;
+    /*border-radius: 1em;*/
+    /*border: 0.1em solid antiquewhite;*/
+    color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 2vh;
+    border: none;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.btn-next {
+    font-size: 2em;
+    padding: 0.1em 0.5em;
+}
+
+.btn-prev {
+    font-size: 2em;
+    padding: 0.1em 0.5em;
+}
+
+.btn-pause {
+    font-size: 3em;
+    /*padding: 0.5em 1.5em;*/
+}
+
+.btn-play {
+    font-size: 3em;
+    /*padding: 0.5em 1.2em;*/
+}
+
+.can-hover.dark-mode {
+    background-color: transparent;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+}
+
+.can-hover.light-mode {
+    background-color: transparent;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+}
+
+.can-hover:hover.dark-mode {
+    background-color: transparent;
+    color: #333;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+}
+
+.can-hover:hover.light-mode {
+    background-color: transparent;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}

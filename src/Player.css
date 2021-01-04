@@ -1,3 +1,4 @@
+/*
 .song-info-ext {
     display: table;
     width: 100%;
@@ -7,12 +8,86 @@
     display: table-cell;
     vertical-align: middle;
 }
+*/
+
+.song-area {
+    width: 100vw;
+}
+
+.song-area2 {
+    margin-bottom: 0vh;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+}
 
 .song-image {
-    width: 50%;
-    height: auto;
+    width: 50vw;
+    height: 50vw;
     max-height: 300px;
     max-width: 300px;
+    text-decoration: none;
+    font-size: 2em;
+    opacity: 1;
+    display: inline-flex;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    margin: 1vh 1vh 1vh 1vh;
+    border-radius: 50%;
+    color: transparent;
+}
+
+.can-hover-img.dark-mode {
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    border-radius: 5%;
+    color: transparent;
+}
+
+.can-hover-img.light-mode {
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    border-radius: 5%;
+    color: transparent;
+}
+
+.can-hover-img:hover.dark-mode {
+    opacity: 0.5;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -ms-filter: blur(4px);
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    box-shadow: 0 0 30px 2px black;
+    border-radius: 5%;
+    color: transparent;
+}
+
+.can-hover-img:hover.light-mode {
+    margin: 3vh 3vh 3vh 3vh;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    box-shadow: 0 0 30px 2px black;
+    border-radius: 5%;
+    color: transparent;
 }
 
 .song-title {
@@ -23,11 +98,7 @@
 .song-title-link {
     color: antiquewhite;
     text-decoration: none;
-}
-
-.song-title-link:hover {
-    color: #333;
-    transition: all 0.5s ease;
+    display: inline-block;
 }
 
 .song-artist {
@@ -38,11 +109,7 @@
 .song-artist-link {
     color: antiquewhite;
     text-decoration: none;
-}
-
-.song-artist-link:hover {
-    color: #333;
-    transition: all 0.5s ease;
+    display: inline-block;
 }
 
 .progress-border {

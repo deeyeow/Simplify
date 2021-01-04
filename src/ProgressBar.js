@@ -8,7 +8,7 @@ const ProgressBar = (props) => {
 
     let progressBarStyle = {
         width: ((props.progress_ms / props.duration_ms) * 100) + '%',
-        animation: props.is_playing ? 'fadein 2s forwards' : 'fadeout 2s forwards',
+        animation: props.is_playing ? 'fadein 0.5s forwards' : 'fadeout 0.5s forwards',
         'background-color': darkMode.value ? 'antiquewhite' : 'black',
     };
 

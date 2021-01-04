@@ -7,10 +7,10 @@ import * as $ from 'jquery';
 import {auth_URL} from './auth';
 
 import Player from './Player';
+import MediaControls from './MediaControls';
 import DarkModeToggle from './DarkMode';
-import './DarkMode.css';
 import ButtonLogin from './ButtonLogin';
-
+import SongInfo from './SongInfo';
 
 class App extends React.Component {
     constructor() {
@@ -21,7 +21,9 @@ class App extends React.Component {
             is_playing: false,
             item: {
                 album: {
-                    images: [{ url: ''}]
+                    images: [{ url: ''}],
+                    external_urls: {},
+                    name: '',
                 },
                 artists: [{
                     name: '',
@@ -162,7 +164,7 @@ class App extends React.Component {
             <div className='App'>
                 {/* If no token, get*/}
                 {!this.state.token && (
-                    <header className='App-header-login' >
+                    <header className='App-header'>
                         <ButtonLogin
                         auth_URL={auth_URL}
                         />
@@ -170,57 +172,33 @@ class App extends React.Component {
                     </header>
                 )}
                 {this.state.token && !this.state.no_data && (
-                    <header className='App-header-music'>
-                        <div className='music-area'>
+                    <header className='App-header'>
+                        <div className='song-area'>
+                            <SongInfo
+                            is_playing={this.state.is_playing}
+                            item={this.state.item}
+                            />
                             <Player
                             is_playing={this.state.is_playing}
                             progress_ms={this.state.progress_ms}
                             item={this.state.item}
                             device={this.state.device}
                             />
-                            {this.state.is_playing && (
-                                <div className='media-controls-table'>
-                                    <div className='media-controls-row'>
-                                        <button
-                                        className='btn-media btn-prev'
-                                        onClick={() => this.getPrevSong(this.state.token)}>
-                                            &#171;
-                                        </button>
-                                        <button 
-                                        className='btn-media btn-pause'
-                                        onClick={() => this.pauseCurrentlyPlaying(this.state.token)}>
-                                            <b>&#8545;</b>
-                                        </button>
-                                        <button
-                                        className='btn-media btn-next'
-                                        onClick={() => this.getNextSong(this.state.token)}>
-                                            &#187;
-                                        </button>
-                                    </div>
-                                </div>
-                            )}
-                            {!this.state.is_playing && (
-                                <div className='media-controls-table'>
-                                    <div className='media-controls-row'>
-                                        <button 
-                                        className='btn-media btn-play'
-                                        onClick={() => this.resumeCurrentlyPlaying(this.state.token)}>
-                                            &nbsp;&#9658;
-                                        </button>
-                                    </div>
-                                </div>
-                            )}
-                            <DarkModeToggle />
                         </div>
+                        <MediaControls
+                        is_playing={this.state.is_playing}
+                        token={this.state.token}
+                        />
+                        <DarkModeToggle />
                     </header>
                 )}
                 {this.state.no_data && (
-                    <header className='App-header-login'>
+                    <header className='App-header'>
                         <div className='no-music-text'>
                             Songs you play will appear here.
                         </div>
                         <DarkModeToggle />
-                    </header>
+                    /</header>
                 )}
             </div>
         );
