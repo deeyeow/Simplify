@@ -9,7 +9,7 @@ import {auth_URL} from './auth';
 import Player from './Player';
 import MediaControls from './MediaControls';
 import DarkModeToggle from './DarkMode';
-import ButtonLogin from './ButtonLogin';
+import Login from './Login';
 import SongInfo from './SongInfo';
 
 class App extends React.Component {
@@ -115,49 +115,6 @@ class App extends React.Component {
         });
     }
 
-    pauseCurrentlyPlaying(token) {
-        $.ajax({
-            url: 'https://api.spotify.com/v1/me/player/pause',
-            method: 'PUT',
-            headers: {
-                'Authorization': 'Bearer ' + token
-            },
-            /* no response for PUT */
-        })
-    }
-
-    resumeCurrentlyPlaying(token) {
-        $.ajax({
-            url: 'https://api.spotify.com/v1/me/player/play',
-            method: 'PUT',
-            headers: {
-                'Authorization': 'Bearer ' + token
-            },
-            /* no response for PUT */
-        })
-    }
-
-    getNextSong(token) {
-        $.ajax({
-            url: 'https://api.spotify.com/v1/me/player/next',
-            method: 'POST',
-            headers: {
-                'Authorization': 'Bearer ' + token
-            },
-            /* no response for POST */
-        })
-    }
-
-    getPrevSong(token) {
-        $.ajax({
-            url: 'https://api.spotify.com/v1/me/player/previous',
-            method: 'POST',
-            headers: {
-                'Authorization': 'Bearer ' + token
-            },
-            /* no response for POST */
-        })
-    }
 
     render() {
         return (
@@ -165,7 +122,7 @@ class App extends React.Component {
                 {/* If no token, get*/}
                 {!this.state.token && (
                     <header className='App-header'>
-                        <ButtonLogin
+                        <Login
                         auth_URL={auth_URL}
                         />
                         <DarkModeToggle />

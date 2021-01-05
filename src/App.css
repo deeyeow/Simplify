@@ -38,42 +38,6 @@
   }
 }
 
-.btn-login-light {
-    background-color: transparent;
-    border-radius: 2em;
-    border: 0.1em solid black;
-    color: black;
-    cursor: pointer;
-    font-size: 1.5vh;
-    padding: 0.7em 1.5em;
-    transition: all 0.5s ease;
-    animation: fadein 2s forwards;
-    text-decoration: none;
-}
-
-.btn-login-light:hover {
-    background: black;
-    color: antiquewhite;
-}
-
-.btn-login-dark {
-    background-color: transparent;
-    border-radius: 2em;
-    border: 0.1em solid antiquewhite;
-    color: antiquewhite;
-    cursor: pointer;
-    font-size: 1.5vh;
-    padding: 0.7em 1.5em;
-    transition: all 0.5s ease;
-    animation: fadein 2s forwards;
-    text-decoration: none;
-}
-
-.btn-login-dark:hover {
-    background: antiquewhite;
-    color: #333;
-}
-
 .no-music-text {
     color: antiquewhite;
     cursor: pointer;

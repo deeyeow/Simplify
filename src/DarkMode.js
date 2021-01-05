@@ -6,7 +6,7 @@ import './DarkMode.css';
 const DarkModeToggle = (props) => {
     /* manually add each HTML element */
     const darkMode = useDarkMode(true);
-    /*const darkMode1 = useDarkMode(true, {element: document.getElementsByClassName('btn-login')[0]});*/
+    const darkMode0 = useDarkMode(true, {element: document.getElementsByClassName('btn-login')[0]});
     const darkMode1 = useDarkMode(true, {element: document.getElementsByClassName('song-image')[0]});
     const darkMode2 = useDarkMode(true, {element: document.getElementsByClassName('btn-prev')[0]});
     const darkMode3 = useDarkMode(true, {element: document.getElementsByClassName('btn-pause')[0]});
@@ -19,13 +19,6 @@ const DarkModeToggle = (props) => {
 
     return (
         <div>
-            {/*
-            <button onClick={() => {
-                darkMode.toggle();
-            }}>
-                ☀ Toggle Dark Mode ☾
-            </button>
-            */}
             <ButtonToggle
             checked={darkMode.value}
             onChange={darkMode.toggle}
