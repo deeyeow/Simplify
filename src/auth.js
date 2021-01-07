@@ -1,7 +1,7 @@
 const auth_endpoint = 'https://accounts.spotify.com/authorize';
 
 const client_id = '4c9727379da54023a85576b3e41fa6e5';
-const redirect_uri = 'http://spotify-v1.surge.sh';
+const redirect_uri = 'http://simplify-app.surge.sh';
 const scopes = [
     'user-read-playback-state',
     'user-top-read',

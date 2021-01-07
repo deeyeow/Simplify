@@ -18,7 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "yarn run build && surge -p build -d spotify-v1.surge.sh"
+    "deploy": "yarn run build && surge -p build -d simplify-app.surge.sh"
   },
   "eslintConfig": {
     "extends": [

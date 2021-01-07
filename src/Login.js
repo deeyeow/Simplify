@@ -1,6 +1,5 @@
 import React from 'react';
 import useDarkMode from 'use-dark-mode';
-
 import './Login.css';
 
 const Login = (props) => {

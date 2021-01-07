@@ -1,5 +1,4 @@
-.toggle-btn
-{
+.toggle-btn {
     position: fixed;
     width: 4vh;
     height: 2vh;
@@ -11,8 +10,7 @@
     margin-right: 10px;
 }
 
-input[type="checkbox"]
-{
+input[type="checkbox"] {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -27,8 +25,7 @@ input[type="checkbox"]
 
 /* First toggle btn */
 
-#_1st-toggle-btn span
-{
+#_1st-toggle-btn span {
     position: absolute;
     top: 0;
     right: 0;
@@ -42,8 +39,7 @@ input[type="checkbox"]
     transition: 0.2s ease background-color, 0.2s ease opacity;
 }
 
-#_1st-toggle-btn span:before,#_1st-toggle-btn span:after
-{
+#_1st-toggle-btn span:before,#_1st-toggle-btn span:after {
     content: '';
     position: absolute;
     top: 0.3vh;
@@ -53,38 +49,32 @@ input[type="checkbox"]
     transition: 0.5s ease transform, 0.2s ease background-color;
 }
 
-#_1st-toggle-btn span:before
-{
+#_1st-toggle-btn span:before {
     background-color: antiquewhite;
     transform: translate(-4vh,0px);
     z-index: 1;
 }
 
-#_1st-toggle-btn span:after
-{
+#_1st-toggle-btn span:after {
     background-color: black;
     transform: translate(-1.6vh,0px);
     z-index: 0;
 }
 
-#_1st-toggle-btn input[type="checkbox"]:checked + span
-{
+#_1st-toggle-btn input[type="checkbox"]:checked + span {
     background-color: black;
 }
 
-#_1st-toggle-btn input[type="checkbox"]:active + span
-{
+#_1st-toggle-btn input[type="checkbox"]:active + span {
     opacity: 0.5;
 }
 
-#_1st-toggle-btn input[type="checkbox"]:checked + span:before
-{
+#_1st-toggle-btn input[type="checkbox"]:checked + span:before {
     background-color: black;
     transform: translate(-0.4vh,-0.45vh);
 }
 
-#_1st-toggle-btn input[type="checkbox"]:checked + span:after
-{
+#_1st-toggle-btn input[type="checkbox"]:checked + span:after {
     background-color: antiquewhite;
     transform: translate(0.2vh,0px);
 }

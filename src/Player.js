@@ -1,6 +1,6 @@
 import React from 'react';
-import './Player.css';
 import ProgressBar from './ProgressBar';
+import './Player.css';
 
 const Player = (props) => {
 
