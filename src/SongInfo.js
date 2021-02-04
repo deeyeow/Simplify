@@ -31,7 +31,8 @@ const SongInfo = (props) => {
         className='song-area2'
         style={shift}>
             <a 
-            className='song-image can-hover-img' 
+            className='song-image can-hover-img'
+            target="_blank" rel="noopener noreferrer" 
             href={props.item.album.external_urls['spotify']}
             style={image}>
                 {props.item.album.name}
@@ -39,6 +40,7 @@ const SongInfo = (props) => {
             <div className='song-title'>
                 <a
                 className='song-title-link can-hover'
+                target="_blank" rel="noopener noreferrer"
                 style={fade} 
                 href={props.item.external_urls['spotify']}>
                     {props.item.name}
@@ -47,6 +49,7 @@ const SongInfo = (props) => {
             <div className='song-artist'>
                 <a 
                 className='song-artist-link can-hover'
+                target="_blank" rel="noopener noreferrer"
                 style={fade} 
                 href={props.item.artists[0].external_urls['spotify']}>
                     {props.item.artists[0].name}
