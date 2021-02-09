@@ -55,8 +55,6 @@ const SongInfo = (props) => {
                     {props.item.artists[0].name}
                 </a>
             </div>
-            <div className='popularity' style={fade}>Song Popularity - {props.item.popularity}</div>
-            <div className='website' style={fade}>https://darren-yau.webflow.io</div>
         </div>
     );
 
